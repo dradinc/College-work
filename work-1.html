@@ -1,12 +1,198 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name= "viewport" content= "width=device-width, initial-scale=1.0">
     <meta http-equiv= "X-UA-Compatible" content= "ie=edge">
     <title>Cool work</title>
-</head>
-<body>
-    
-</body>
+
+    <style>
+      :root {
+        --bgc: #888;
+        --txc: #fff;
+        --gbgc: #666;
+        --gap: 10px;
+      }
+
+      body {
+        background-color: var(--bgc);
+        color: var(--txc);
+      }
+      .p.title-p {
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 25pt;
+        text-align: center;
+      }
+      .maring {
+        margin: 10px;
+      }
+      .gap {
+        gap: var(--gap);
+      }
+      
+
+      .grid {
+        display: grid;
+      }
+      .grid > .grid-span-2 {
+        grid-column-end: span 2;
+      }
+
+      .grid.main-grid {
+        grid-area: auto;
+        background-color: var(--gbgc);
+        border-radius: 15px;
+        grid-template-columns: repeat(2, 1fr);
+        padding-bottom: 35px;        
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: 300px;
+        margin-right: 300px;
+      }
+      .grid.select-area-head-grid {
+        grid-template-columns: repeat(5, 1fr);
+      }      
+      .grid.select-area-grid {
+        grid-template-columns: repeat(3, 1fr);        
+        grid-auto-rows: 75px;
+      }
+      .grid.select-area-color-grid {
+        grid-template-columns: repeat(4, 1fr);        
+        grid-auto-rows: 50px;
+      }
+      .select-area-article {
+        background-color:darkcyan;
+        border-radius: 10px;
+      }
+
+      @media screen and (max-width: 1300px) {
+        .grid.main-grid {
+          margin-left: 250px;
+          margin-right: 250px;
+        }
+      }
+      @media screen and (max-width: 1200px) {
+        .grid.main-grid {
+          margin-left: 200px;
+          margin-right: 200px;
+        }
+      }
+      @media screen and (max-width: 1100px) {
+        .grid.main-grid {
+          margin-left: 150px;
+          margin-right: 150px;
+        }
+      }
+      @media screen and (max-width: 1000px) {
+        .grid.main-grid {
+          margin-left: 100px;
+          margin-right: 100px;
+        }
+        .grid.select-area-head-grid {
+          grid-template-columns: repeat(5, 1fr);
+        }      
+        .grid.select-area-grid {
+          grid-template-columns: repeat(3, 1fr);        
+          grid-auto-rows: 75px;
+        }
+        .grid.select-area-color-grid {
+          grid-template-columns: repeat(4, 1fr);        
+          grid-auto-rows: 50px;
+        }
+      }
+      @media screen and (max-width: 900px) {
+        .grid.main-grid {
+          margin-left: 50px;
+          margin-right: 50px;
+        }
+        .grid.select-area-head-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }      
+        .grid.select-area-grid {
+          grid-template-columns: repeat(2, 1fr);        
+          grid-auto-rows: 75px;
+        }
+        .grid.select-area-color-grid {
+          grid-template-columns: repeat(3, 1fr);        
+          grid-auto-rows: 50px;
+        }
+      }
+      @media screen and (max-width: 750px) {
+        .grid.main-grid {
+          grid-template-columns: repeat(1, 1fr);
+          margin-left: 35px;
+          margin-right: 35px;
+        }
+        .grid.select-area-head-grid {
+          grid-template-columns: repeat(5, 1fr);
+        }      
+        .grid.select-area-grid {
+          grid-template-columns: repeat(4, 1fr);        
+          grid-auto-rows: 75px;
+        }
+        .grid.select-area-color-grid {
+          grid-template-columns: repeat(5, 1fr);        
+          grid-auto-rows: 50px;
+        }
+        .grid > .grid-span-2 {
+          grid-column-end: span 1;
+        }
+      }
+      @media screen and (max-width: 650px) {
+        .grid.main-grid {
+          grid-template-columns: repeat(1, 1fr);
+          margin-left: 15px;
+          margin-right: 15px;
+        }
+        .grid.select-area-head-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }      
+        .grid.select-area-grid {
+          grid-template-columns: repeat(3, 1fr);        
+          grid-auto-rows: 75px;
+        }
+        .grid.select-area-color-grid {
+          grid-template-columns: repeat(4, 1fr);        
+          grid-auto-rows: 50px;
+        }
+        .grid > .grid-span-2 {
+          grid-column-end: span 1;
+        }
+      }
+    </style>
+
+  </head>
+  <body>
+    <section class="grid main-grid">
+      <article class="grid-span-2"><p class="p title-p">Make your illustration</p></article>
+      <article>
+        <section class="grid select-area-head-grid gap maring">
+          <article>BODY</article>
+          <article>HEAD</article>
+          <article>FACE</article>
+          <article>HAIR</article>
+          <article>ACCESSORY</article>
+        </section>
+        <section class="grid select-area-grid gap maring">
+          <article class="select-area-article">1</article>
+          <article class="select-area-article">2</article>
+          <article class="select-area-article">3</article>
+          <article class="select-area-article">4</article>
+          <article class="select-area-article">5</article>
+          <article class="select-area-article">6</article>
+        </section>
+        <section class="grid select-area-color-grid gap maring">
+          <article class="select-area-article">1</article>
+          <article class="select-area-article">2</article>
+          <article class="select-area-article">3</article>
+          <article class="select-area-article">4</article>
+          <article class="select-area-article">5</article>
+          <article class="select-area-article">6</article>
+          <article class="select-area-article">7</article>
+          <article class="select-area-article">8</article>
+        </section>
+      </article> 
+      <article class="select-area-article maring">illustration</article>
+    </section>
+  </body>
 </html>
